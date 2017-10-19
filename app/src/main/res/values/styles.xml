@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:navigationBarColor">@color/background_super_dark</item>
+        <item name="android:statusBarColor">@color/background_super_dark</item>
+        <item name="android:textColorHint">@color/hint_disabled_dark</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="collapsingTitleLayoutStyle">@style/Widget.Transition.CollapsingTitle</item>
+        <item name="android:colorEdgeEffect">@color/mid_grey</item>
+    </style>
+
+    <style name="MyAppTheme.Home">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/immersive_bars</item>
+        <item name="android:navigationBarColor">@color/immersive_bars</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowEnterTransition">@transition/home_enter</item>
+        <!--<item name="shotLoadingPlaceholderColors">@array/loading_placeholders_dark</item>-->
+        <!--<item name="initialBadgeColor">@color/gif_badge_dark_image</item>-->
+    </style>
+
+    <style name="Widget.Transition" parent="android:Widget" />
+
+    <style name="Widget.Transition.CollapsingTitle">
+        <item name="android:textAppearance">@style/TextAppearance.ToolbarTitle</item>
+        <item name="lineHeightHint">28sp</item>
+        <item name="maxExpandedTextSize">@dimen/display_4_text_size</item>
+        <item name="titleInsetStart">@dimen/keyline_1</item>
+        <item name="titleInsetTop">@dimen/padding_normal</item>
+        <item name="titleInsetEnd">@dimen/padding_normal</item>
+        <item name="titleInsetBottom">@dimen/padding_normal</item>
+        <item name="android:maxLines">5</item>
+    </style>
+
+    <!-- ToolBar 相关-->
+
+    <style name="TextAppearance.ToolbarTitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <!--<item name="android:fontFamily">@font/roboto_mono</item>-->
+    </style>
+
+    <style name="Widget.Transition.Toolbar">
+        <item name="android:titleTextAppearance">@android:style/TextAppearance.Material.Widget.ActionBar.Title</item>
+        <item name="android:background">?android:colorPrimary</item>
+        <item name="android:elevation">@dimen/z_app_bar</item>
+        <item name="android:theme">@style/PlaidDarkOverlay</item>
+    </style>
+    <style name="PlaidDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <!-- Used to theme dark elements in light themed screens.
+             Extend the material dark Action Bar overlay as this contains text styling. -->
+    </style>
+
+    <style name="Widget.Transition.HomeToolbar" parent="Widget.Transition.Toolbar.SmallCapsTitle">
+        <item name="android:background">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:theme">@android:style/ThemeOverlay.Material.Dark</item>
+    </style>
+
+    <style name="Widget.Transition.Toolbar.SmallCapsTitle">
+        <item name="android:titleTextAppearance">@style/TextAppearance.ToolbarTitleSmallCaps</item>
+    </style>
+
+    <style name="TextAppearance.ToolbarTitleSmallCaps" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <item name="android:fontFeatureSettings">smcp</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <!-- ToolBar 相关 ================== END -->
+
+
+    <!--  Empty View 相关 -->
+
+    <style name="TextAppearance.EmptyText" parent="@style/TextAppearance.DialogContent">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <item name="lineHeightHint">24sp</item>
+    </style>
+
+    <style name="TextAppearance.DialogContent" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:textColor">@color/text_secondary_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeightHint">24sp</item>
+    </style>
+
+    <!--  Empty View 相关 ============== 结束 -->
+
+    <style name="TextAppearance.Filter" parent="@android:style/TextAppearance.Material.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/filter_text</item>
+    </style>
+
+
+</resources>
