@@ -101,5 +101,22 @@
         <item name="android:textColor">@color/filter_text</item>
     </style>
 
+    <style name="TextAppearance.TilePrimary" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeightHint">20sp</item>
+    </style>
+
+    <style name="Widget.Transition.TilePrimary">
+        <item name="android:textAppearance">@style/TextAppearance.TilePrimary</item>
+    </style>
+
+    <style name="TextAppearance.TileSecondary" parent="@android:style/TextAppearance.Material.Body2">
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Widget.Transition.TileSecondary">
+        <item name="android:textAppearance">@style/TextAppearance.TileSecondary</item>
+    </style>
 
 </resources>

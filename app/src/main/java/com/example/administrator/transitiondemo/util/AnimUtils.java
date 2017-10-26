@@ -176,6 +176,42 @@ public class AnimUtils {
         }
     }
 
+    public static abstract class FloatProperty<T> extends Property<T, Float> {
+        public FloatProperty(String name) {
+            super(Float.class, name);
+        }
+
+        /**
+         * A type-specific override of the {@link #set(Object, Float)} that is faster when dealing
+         * with fields of type <code>float</code>.
+         */
+        public abstract void setValue(T object, float value);
+
+        @Override
+        final public void set(T object, Float value) {
+            setValue(object, value);
+        }
+    }
+
+    public static abstract class IntProperty<T> extends Property<T, Integer> {
+
+        public IntProperty(String name) {
+            super(Integer.class, name);
+        }
+
+        /**
+         * A type-specific override of the {@link #set(Object, Integer)} that is faster when dealing
+         * with fields of type <code>int</code>.
+         */
+        public abstract void setValue(T object, int value);
+
+        @Override
+        final public void set(T object, Integer value) {
+            setValue(object, value.intValue());
+        }
+
+    }
+
     /**
      * https://halfthought.wordpress.com/2014/11/07/reveal-transition/
      * <p/>

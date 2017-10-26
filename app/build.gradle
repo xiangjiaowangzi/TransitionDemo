@@ -20,20 +20,27 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     testCompile 'junit:junit:4.12'
-
+    //palette
+    compile "com.android.support:palette-v7:${versions.supportLibrary}"
     // ui
     compile "com.android.support:recyclerview-v7:${versions.supportLibrary}"
     //butterknife
     compile "com.jakewharton:butterknife:${versions.butterknife}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${versions.butterknife}"
     //glide
-    compile "com.github.bumptech.glide:glide:${versions.glide}"
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     annotationProcessor "com.github.bumptech.glide:compiler:${versions.glide}"
-
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    //jsoup
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile project(':bypass')
 }
